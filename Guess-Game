@@ -1,0 +1,24 @@
+import random
+
+print("\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t******************************* LET'S BEGIN WITH THE GAME OF GUESSING *******************************")
+
+
+
+b=random.randint(1,30)
+while True:
+    a=input(" \n\n\n\n\t\t\tPlease Enter the Number of Your Choice Between 1 to 30 Or Press q for exit = ")
+    if(a!='q'):
+        if(int(a)>=1 and int(a)<=30):
+            if(b==int(a)):
+                print("\n\n\n\n\t\t\tHurray! You Guess the Correct Number. Nice Guessing ....!!!!!")
+
+            elif(int(a)<b):
+                print("\n\n\n\tOops! Your Guess LESS then the Actual Number. The Actual Number is "+str(b))
+
+            else:
+                print("\n\n\n\tOops! Your Guess More then the Actual Number. The Actual Number is "+str(b))
+
+        else:
+            print("\n\n\n\n\t\t\tOOPS! Please Enter the Number integer the Given Range ")
+    else:
+        exit("\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t******************************* THANKS FOR PLAYING THIS GAME ****************************")
